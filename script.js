@@ -1,25 +1,26 @@
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', () => {
     const video = document.getElementById('bg-video');
     const music = document.getElementById('bg-music');
 
-    // Loop video, skipping last 5 seconds
-    video.addEventListener('timeupdate', function() {
-        if (video.duration - video.currentTime < 5) {
-            video.currentTime = 0;
-            video.play();
+    const restartMedia = (media) => {
+        if (!media || typeof media.duration !== 'number' || !Number.isFinite(media.duration)) return;
+        if (media.duration - media.currentTime < 5) {
+            media.currentTime = 0;
+            media.play().catch(() => {});
         }
-    });
+    };
 
-    // Loop music, skipping last 5 seconds
-    music.addEventListener('timeupdate', function() {
-        if (music.duration - music.currentTime < 5) {
-            music.currentTime = 0;
-            music.play();
+    if (video) {
+        video.addEventListener('timeupdate', () => restartMedia(video));
+    }
+
+    if (music) {
+        music.addEventListener('timeupdate', () => restartMedia(music));
+    }
+
+    document.body.addEventListener('click', () => {
+        if (music) {
+            music.play().catch(() => {});
         }
-    });
-
-    // Ensure music plays (autoplay policy)
-    document.body.addEventListener('click', function() {
-        music.play();
-    });
-};
+    }, { once: true });
+});
