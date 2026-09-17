@@ -1,43 +1,86 @@
-<!DOCTYPE html>
-<html lang="uk">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyki | Neo Purple</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090a0d">
+  <meta name="description" content="The personal universe of Kyki / KykiShield. A creator and developer building experimental projects, interfaces, and digital worlds.">
+  <meta property="og:title" content="Kyki — A personal universe">
+  <meta property="og:description" content="Experiments, interfaces, and worlds in progress. Welcome to the personal space of KykiShield.">
+  <meta property="og:type" content="website">
+  <title>Kyki — A personal universe</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23090a0d'/%3E%3Cpath d='M18 15v34m3-17L45 15M21 32l24 17' fill='none' stroke='%23eeeef5' stroke-width='5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="./assets/orbit.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
 </head>
 <body>
-    <video id="bg-video" autoplay muted loop playsinline>
-        <source src="zad.mp4" type="video/mp4">
-    </video>
-    <audio id="bg-music" src="music.mp3" autoplay loop></audio>
-
-    <div class="aurora aurora-one"></div>
-    <div class="aurora aurora-two"></div>
-
-    <div class="overlay-glow"></div>
-    <div class="scanline"></div>
-
-    <main class="container">
-        <div class="corner corner-tl"></div>
-        <div class="corner corner-tr"></div>
-        <div class="corner corner-bl"></div>
-        <div class="corner corner-br"></div>
-
-        <img src="ava.jpg" alt="Kyki Avatar" class="avatar">
-        <div class="content">
-            <p class="eyebrow">underworld • neon • online</p>
-            <h1>Kyki</h1>
-            <p class="subtitle">Street pulse • hard edges • no mercy.</p>
-            <div class="links">
-                <a href="https://steamcommunity.com/id/kykishield/" target="_blank" rel="noreferrer" data-sound="shot">Steam</a>
-                <a href="https://sk-steam.github.io/KS-steam/" target="_blank" rel="noreferrer" data-sound="shot">KS Steam</a>
-                <a href="https://sk-steam.github.io/passports/" target="_blank" rel="noreferrer" data-sound="shot">Passports</a>
-                <a href="https://discord.com/users/kyki678_90621" target="_blank" rel="noreferrer" data-sound="shot">Discord</a>
-            </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-frame">
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Kyki home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 5v22M10 16 26 5M10 16l16 11"/></svg><span>kyki<span class="brand-slash">/</span></span></a>
+      <nav aria-label="Main navigation"><a class="active" href="#home">Overview</a><a href="#projects">Experiments</a><a href="#identity">Identity</a></nav>
+      <a class="header-connect" href="#connect">Let’s connect <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true"></div>
+        <canvas class="particles" aria-hidden="true"></canvas>
+        <div class="hero-topline mono"><span><i class="signal-dot"></i> PERSONAL SPACE / 001</span><span class="hero-coordinate">INDEPENDENT BY NATURE</span></div>
+        <div class="hero-content">
+          <div class="eyebrow"><span class="tiny-cross" aria-hidden="true">✳</span> CREATOR. DEVELOPER. EXPLORER.</div>
+          <h1 id="hero-title">Kyki<span class="title-dot">.</span></h1>
+          <div class="alias mono">ALSO KNOWN AS <span>KYKISHIELD</span></div>
+          <p class="hero-description">A mind in motion.<br>A universe in progress.</p>
+          <p class="hero-subtext">I build tools, experiments, and digital worlds.<br>Sometimes useful. Always a little unexpected.</p>
+          <a class="primary-button" href="#projects">Explore my universe <span aria-hidden="true">↗</span></a>
         </div>
+        <div class="orbit-caption mono" aria-hidden="true"><span class="caption-cross">+</span><span>THOUGHTS INTO SYSTEMS<br><span class="muted">∞ POSSIBLE ITERATIONS</span></span></div>
+        <div class="hero-bottom mono"><a href="#projects"><span class="scroll-line" aria-hidden="true"></span>SCROLL TO DISCOVER</a><span>NOT A DESTINATION. AN ONGOING EXPERIMENT.</span><span class="hero-index">01 — 04</span></div>
+      </section>
+      <section class="projects section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading"><div><p class="eyebrow"><span class="section-number">01 /</span> SELECTED EXPERIMENTS</p><h2 id="projects-title">Worlds I’m building<span class="muted">.</span></h2></div><span class="section-aside mono">DIFFERENT IDEAS. SAME MIND.</span></div>
+        <div class="project-grid">
+          <a class="project-card steam-card" href="https://sk-steam.github.io/KS-steam/" target="_blank" rel="noopener noreferrer" aria-label="Explore KS Steam (opens in a new tab)">
+            <div class="project-visual steam-visual" aria-hidden="true">
+              <div class="visual-topline mono"><span>KS SYSTEMS</span><span>PROJECT_001</span></div>
+              <div class="steam-wordmark"><span class="ks-mark">ks<span class="ks-asterisk">✳</span></span><span class="steam-word">S T E A M</span></div>
+              <div class="visual-bottomline mono"><span class="little-line"></span>YOUR LIBRARY. YOUR SPACE.<span>↗</span></div>
+            </div>
+            <div class="project-info"><div class="project-meta mono"><span>TOOL / INTERFACE</span><span>01</span></div><div class="project-title"><h3>KS Steam</h3><span class="round-arrow" aria-hidden="true">↗</span></div><p>A different entry point to your games.<br>My take on a launcher and the Steam experience.</p><div class="project-tags"><span>Launcher</span><span>Steam ecosystem</span><span>Independent project</span></div></div>
+          </a>
+          <a class="project-card vault-card" href="https://kykilol.github.io/V.A.U.L.T./" target="_blank" rel="noopener noreferrer" aria-label="Enter V.A.U.L.T. (fictional psychological horror project, opens in a new tab)">
+            <div class="project-visual vault-visual" aria-hidden="true">
+              <div class="visual-topline mono"><span><span class="warning-triangle">△</span> RESTRICTED ARCHIVE</span><span>PROJECT_002</span></div>
+              <div class="vault-wordmark"><span class="vault-bracket">[</span><span>V.A.U.L.T.</span><span class="vault-bracket">]</span></div>
+              <div class="vault-scanline"></div><div class="visual-bottomline mono"><span>THE UNKNOWN IS STILL HERE.</span><span class="vault-status">● CONTAINED</span></div>
+            </div>
+            <div class="project-info"><div class="project-meta mono"><span>FICTION / IMMERSIVE EXPERIMENT</span><span>02</span></div><div class="project-title"><h3>V.A.U.L.T.</h3><span class="round-arrow" aria-hidden="true">↗</span></div><p>Some things are better left contained.<br>A fictional world of anomalies and psychological horror.</p><div class="project-tags"><span>Worldbuilding</span><span>Containment</span><span>Psychological horror</span></div></div>
+          </a>
+        </div>
+        <div class="project-footnote"><span class="mono">ALWAYS A WORK IN PROGRESS.</span><a href="https://github.com/sk-steam" target="_blank" rel="noopener noreferrer">More on GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></div>
+      </section>
+      <section class="identity section" id="identity" aria-labelledby="identity-title">
+        <div class="identity-copy"><p class="eyebrow"><span class="section-number">02 /</span> THE HUMAN IN THE SYSTEM</p><h2 id="identity-title">Always curious.<br>Never quite <span class="serif-word">finished.</span></h2><p>I’m Kyki. You might know me as KykiShield.</p><p>I make things for the curiosity of it — a tool I want to use, an interface I want to explore, a world that doesn’t exist yet.</p><p>Code is how I connect the pieces. Everything here is part of the same evolving experiment.</p><div class="identity-signature"><span class="signature">Kyki</span><span class="mono">PERSON BEHIND THE PROJECTS</span></div></div>
+        <a class="passport" href="https://sk-steam.github.io/passports/" target="_blank" rel="noopener noreferrer" aria-label="Open Kyki's fictional digital passport (opens in a new tab)">
+          <div class="passport-top mono"><span>DIGITAL IDENTITY</span><span>↗</span></div><div class="passport-emblem" aria-hidden="true"><svg viewBox="0 0 70 70"><path d="M35 4 60 18v30L35 63 10 48V18ZM23 21v25m3-13 21-12m-21 12 21 13"/></svg></div><div class="passport-name">KykiShield</div><div class="passport-handle mono">@KYKI / CITIZEN OF THE INTERNET</div><div class="passport-fields"><div><span class="mono">ROLE</span><strong>Creator & developer</strong></div><div><span class="mono">BOUNDARIES</span><strong>Still exploring</strong></div></div><div class="passport-bottom"><span>View digital passport</span><span class="passport-barcode" aria-hidden="true"></span></div><div class="passport-disclaimer">An experimental identity project.<br>Fictional. Not a government document.</div>
+        </a>
+      </section>
+      <section class="connect section" id="connect" aria-labelledby="connect-title"><div class="section-heading"><div><p class="eyebrow"><span class="section-number">03 /</span> CONNECTED NODES</p><h2 id="connect-title">Find me in the network<span class="muted">.</span></h2></div><span class="section-aside mono">ONE IDENTITY. A FEW DIFFERENT PLACES.</span></div>
+        <div class="network-grid">
+          <a class="network-link github-link" href="https://github.com/sk-steam" target="_blank" rel="noopener noreferrer"><div class="network-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 19c-4 1-4-2-6-2m12 5v-3.8c.04-1.2-.4-2.3-1.1-2.8 3.6-.4 7.3-1.8 7.3-8A6.2 6.2 0 0 0 19.5 3 5.8 5.8 0 0 0 19.4 0s-1.4-.5-4.5 1.7a15.4 15.4 0 0 0-7.8 0C4-.5 2.6 0 2.6 0A5.8 5.8 0 0 0 2.5 3 6.2 6.2 0 0 0 .8 7.4c0 6.2 3.7 7.6 7.3 8-.7.5-1.1 1.6-1.1 2.8V22" transform="translate(1 1) scale(.92)"/></svg></div><span class="network-text"><span class="network-title">GitHub <span class="home-tag mono">HOME BASE</span></span><span class="network-description">Where the ideas become code.</span><span class="network-handle mono">@sk-steam</span></span><span class="network-arrow" aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="network-link" href="https://steamcommunity.com/id/kykishield/" target="_blank" rel="noopener noreferrer"><div class="network-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="16.4" cy="7.7" r="5.3"/><circle cx="16.4" cy="7.7" r="2.5"/><circle cx="7" cy="17" r="3.3"/><path d="m.5 13.7 7.6 3.7m1.6-3 3.5-3.1m-3.8 8 6-6.3"/></svg></div><span class="network-text"><span class="network-title">Steam</span><span class="network-description">The other kind of exploring.</span><span class="network-handle mono">@kykishield</span></span><span class="network-arrow" aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+          <div class="network-link discord-node"><a class="discord-main" href="https://discord.com/users/kyki678_90621" target="_blank" rel="noopener noreferrer"><div class="network-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4 4 5c-2 3-3 7-3 11l5 3 1-2m10 0 1 2 5-3c0-4-1-8-3-11l-4-1-1 2H9Zm-1 12c3 2 7 2 10 0"/><ellipse cx="8.5" cy="11.5" rx="1" ry="1.6"/><ellipse cx="15.5" cy="11.5" rx="1" ry="1.6"/></svg></div><span class="network-text"><span class="network-title">Discord</span><span class="network-description">A conversation starts here.</span><span class="network-handle mono">kyki678_90621</span></span><span class="network-arrow" aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a><button class="copy-handle" type="button" aria-label="Copy Discord username"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="6" y="6" width="10" height="11" rx="2"/><path d="M12 6V3H3v10h3"/></svg><span>Copy username</span></button></div>
+        </div>
+      </section>
+      <section class="closing"><span class="closing-cross" aria-hidden="true">✳</span><p>Still here. Still building.</p><span class="mono">THE UNIVERSE IS NEVER FINISHED.</span><a href="#home" aria-label="Back to top">↑</a></section>
     </main>
-
-    <script src="script.js"></script>
+    <footer class="site-footer"><div><span class="footer-brand">kyki/</span><span class="mono">© <span id="year">2026</span> KYKISHIELD</span></div><span class="footer-message mono">MADE OF CURIOSITY & A LITTLE CHAOS.</span><button class="motion-toggle" type="button" aria-pressed="false"><span class="motion-icon" aria-hidden="true">◌</span><span class="motion-label">Motion on</span></button></footer>
+  </div>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <dialog class="secret-dialog" aria-labelledby="secret-title"><button class="secret-close" type="button" aria-label="Close hidden transmission">×</button><p class="eyebrow">UNLISTED TRANSMISSION / ∞</p><h2 id="secret-title">You found a quiet corner.</h2><p>There’s always something beyond the interface.</p><p class="mono muted">KEEP EXPLORING. — KYKI</p></dialog>
 </body>
 </html>
