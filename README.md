@@ -1,26 +1,31 @@
-# Kyki — a personal universe
+# Kyki — after midnight
 
-A complete static identity website for Kyki / KykiShield. English content, responsive layout, original orbital artwork, ambient particles, reduced-motion support, accessible keyboard navigation, and direct links to the supplied ecosystem.
+Особистий профіль: нічне місто, неон, Надзуна з Yofukashi no Uta.
 
-## Preview
+## Запуск
 
-Run `node preview.mjs` from this directory, then open `http://127.0.0.1:4173`.
+Відкрийте `index.html` у браузері або запустіть локальний статичний сервер. Сайт не потребує встановлення пакетів чи збірки. Для перевірки буфера обміну використовуйте localhost або HTTPS.
 
 ## GitHub Pages
 
-The `dist` directory is the complete, build-free website. Upload its **contents** to the root of a GitHub Pages repository or to its configured publishing directory. In the repository’s Pages settings, select that branch and directory. All local asset paths are relative, so both `username.github.io` and `username.github.io/repository/` work. There is no backend, package installation, or API key requirement.
+1. Створіть репозиторій на GitHub і завантажте `index.html`, `style.css`, `script.js` та папку `assets` у корінь.
+2. Відкрийте **Settings → Pages**.
+3. У **Build and deployment** виберіть **Deploy from a branch**, гілку **main**, папку **/ (root)** та натисніть **Save**.
+4. GitHub покаже посилання після публікації. Всі локальні ресурси мають відносні шляхи, тому сайт працює й у підпапці репозиторію.
 
-Google Fonts is the only external page dependency; system font fallbacks are included. External destinations open in new tabs. No analytics or third-party tracking scripts are included.
+## Налаштування
 
-## Editing
+- Тексти та посилання — `index.html`.
+- Кольори, адаптивність та анімації — `style.css`.
+- Дощ, годинник Києва, звук, копіювання Discord — `script.js`.
+- Ілюстрація — `assets/nazuna-night.png`.
+- Звук запускається лише натисканням кнопки. Анімації можна вимкнути внизу сторінки; системне налаштування зменшеного руху враховується автоматично.
+- Шрифти Google Fonts завантажуються через інтернет; без них працюють системні шрифти. Інших зовнішніх залежностей немає.
 
-- `dist/index.html`: identity, project descriptions, and links.
-- `dist/styles.css`: design and responsive styling.
-- `dist/app.js`: ambient motion, copy-username action, navigation state, and hidden interaction.
-- `dist/assets/orbit.png`: original generated orbital artwork.
+Надані Steam і Discord посилання збережені без змін. Вміст профілів не перевірений. Discord URL із текстовим ім’ям може не відкрити особистий профіль: стандартний перехід Discord потребує числового ID користувача. Для цього додано кнопку копіювання ніка.
 
-The supplied Discord URL contains a username rather than a numeric Discord user ID. It is preserved, and the page also offers a functional Copy username action. Replace that URL with `https://discord.com/users/YOUR_NUMERIC_USER_ID` when available.
+«Паспорт» позначений як вигадані дані. Біографічні тексти — атмосферний художній опис, а не підтверджені факти.
 
-The digital passport and V.A.U.L.T. are explicitly presented as fictional experiments.
+## Ілюстрація
 
-Hidden detail: type `kyki` to find an unlisted transmission; Escape closes it. Motion preference is stored locally on the visitor’s device and follows the operating system’s reduced-motion preference by default.
+Авторська AI fan-art ілюстрація, створена вбудованим imagegen. Фінальний запит: Nazuna Nanakusa з Yofukashi no Uta на даху нічного Токіо; бліде лавандове волосся у двох плетених пучках, рожеві очі, чорна вільна куртка; персонаж праворуч, темне місце для тексту ліворуч; фіолетова й неоново-рожева палітра, місяць, кабелі, туман, мокрі відблиски; детальне аніме, без написів, логотипів і водяних знаків. Права на оригінального персонажа належать його правовласникам; це не офіційний сайт серіалу.
